@@ -369,7 +369,7 @@
             </includeOnlyProperties>
           </configuration>
         </plugin>
-        <plugin>
+<!--         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>${jacoco-maven-plugin.version}</version>
@@ -393,10 +393,28 @@
                 <dataFile>${project.testresult.directory}/coverage/jacoco/jacoco.exec</dataFile>
                 <outputDirectory>${project.testresult.directory}/coverage/jacoco</outputDirectory>
               </configuration>
-            </execution>
+            </execution> -->
+          <plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.7.4.201502262128</version>
+    <executions>
+        <execution>
+            <id>jacoco-initialize</id>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>jacoco-report</id>
+            <phase>test</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
 <execution>
     <id>jacoco-check</id>
-    <phase>package</phase>
+    <phase>test</phase>
     <goals>
         <goal>check</goal>
     </goals>
