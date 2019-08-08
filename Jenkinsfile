@@ -99,6 +99,7 @@ node
    	{
 		FAILED_STAGE=env.STAGE_NAME
 		sh 'mvn package'
+        jacoco changeBuildStatus: true, maximumBranchCoverage: '100', maximumClassCoverage: '100', maximumComplexityCoverage: '100', maximumInstructionCoverage: '100', maximumLineCoverage: '100', maximumMethodCoverage: '100', minimumBranchCoverage: '80', minimumClassCoverage: '80', minimumComplexityCoverage: '80', minimumInstructionCoverage: '80', minimumLineCoverage: '80', minimumMethodCoverage: '80'
         jacoco buildOverBuild: true, deltaBranchCoverage: '100', deltaClassCoverage: '100', deltaComplexityCoverage: '100', deltaInstructionCoverage: '100', deltaLineCoverage: '100', deltaMethodCoverage: '100'
 		jacoco(buildOverBuild:'true',BranchCoverage: '0', ClassCoverage: "${DELTA_CLASS_COVERAGE}", ComplexityCoverage: "${DELTA_COMPLEXITY_COVERAGE}", InstructionCoverage: "${DELTA_INSTRUCTION_COVERAGE}", LineCoverage: "${DELTA_LINE_COVERAGE}", MethodCoverage: "${DELTA_METHOD_COVERAGE}")
    	}
