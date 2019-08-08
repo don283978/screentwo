@@ -394,26 +394,27 @@
                 <outputDirectory>${project.testresult.directory}/coverage/jacoco</outputDirectory>
               </configuration>
             </execution>
-               <execution>
-            <id>check</id>
-            <goals>
-                <goal>check</goal>
-            </goals>
-            <configuration><rules><rule>
-             <element>CLASS</element>
-             <limits>
-              <limit>
-                <counter>LINE</counter>
-                <value>COVEREDRATIO</value>
-                <minimum>0.80</minimum>
-              </limit>
-              <limit>
-                <counter>BRANCH</counter>
-                <value>COVEREDRATIO</value>
-                <minimum>0.80</minimum>
-              </limit>
-           </limits>
-        </execution>
+<execution>
+    <id>jacoco-check</id>
+    <phase>package</phase>
+    <goals>
+        <goal>check</goal>
+    </goals>
+    <configuration>
+        <rules>
+            <rule implementation="org.jacoco.maven.RuleConfiguration">
+                <element>BUNDLE</element>
+                <limits>
+                    <limit implementation="org.jacoco.report.check.Limit">
+                        <counter>INSTRUCTION</counter>
+                        <value>COVEREDRATIO</value>
+                        <minimum>${jacoco.percentage.instruction}</minimum>
+                    </limit>
+                </limits>
+            </rule>
+        </rules>
+    </configuration>
+</execution>
           </executions>
         </plugin>
         <plugin>
