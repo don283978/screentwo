@@ -383,7 +383,7 @@
                 <destFile>${project.testresult.directory}/coverage/jacoco/jacoco.exec</destFile>
               </configuration>
             </execution>
-<!--             <execution>
+            <execution>
               <id>jacoco-site</id>
               <phase>package</phase>
               <goals>
@@ -393,7 +393,7 @@
                 <dataFile>${project.testresult.directory}/coverage/jacoco/jacoco.exec</dataFile>
                 <outputDirectory>${project.testresult.directory}/coverage/jacoco</outputDirectory>
               </configuration>
-            </execution> -->
+            </execution>
           </executions>
         </plugin>
         <plugin>
