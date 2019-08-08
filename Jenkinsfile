@@ -98,7 +98,7 @@ node
    	stage('Code Coverage')
    	{
 		FAILED_STAGE=env.STAGE_NAME
-		sh 'mvn package'
+		sh 'mvn package -Djacoco.percentage.instruction=0.20'
        jacoco (changeBuildStatus: true, maximumBranchCoverage: '100', maximumClassCoverage: '100', maximumComplexityCoverage: '100', maximumInstructionCoverage: '100', maximumLineCoverage: '100', maximumMethodCoverage: '100', minimumBranchCoverage: '80', minimumClassCoverage: '80', minimumComplexityCoverage: '80', minimumInstructionCoverage: '80', minimumLineCoverage: '80', minimumMethodCoverage: '80')
    	}
    }
