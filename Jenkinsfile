@@ -120,6 +120,7 @@ node
           ])
         {  
 	   FAILED_STAGE=env.STAGE_NAME
+       sh 'oc config use-context smartscreenone-devops/masterdnsznr2j7i4pqxfm-eastus-cloudapp-azure-com:443/infyadmin'
 	  node('docker')
     {
         
@@ -145,7 +146,7 @@ node
        sh 'chmod 777 Orchestration/dev/deploy.sh'
        sh 'Orchestration/dev/deploy.sh'
        
-       /*sh 'oc config use-context smartscreenone-dev-apps'
+       /*sh 'oc config use-context smartscreenone-dev-apps'smartscreenone-devops/masterdnsznr2j7i4pqxfm-eastus-cloudapp-azure-com:443/infyadmin
        sh 'oc config view'
        sh 'oc apply -f Orchestration/deployment-smartscreenone-dev.yaml -n=smartscreenone-dev-apps'
        sh 'oc apply -f Orchestration/service.yaml -n=smartscreenone-dev-apps' */
