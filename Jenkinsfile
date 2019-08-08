@@ -99,7 +99,7 @@ node
    	{
 		FAILED_STAGE=env.STAGE_NAME
 		sh 'mvn package'
-		jacoco(buildOverBuild:'true',deltaBranchCoverage: '0', deltaClassCoverage: "${DELTA_CLASS_COVERAGE}", deltaComplexityCoverage: "${DELTA_COMPLEXITY_COVERAGE}", deltaInstructionCoverage: "${DELTA_INSTRUCTION_COVERAGE}", deltaLineCoverage: "${DELTA_LINE_COVERAGE}", deltaMethodCoverage: "${DELTA_METHOD_COVERAGE}")
+		jacoco(buildOverBuild:'true',BranchCoverage: '0', ClassCoverage: "${DELTA_CLASS_COVERAGE}", ComplexityCoverage: "${DELTA_COMPLEXITY_COVERAGE}", InstructionCoverage: "${DELTA_INSTRUCTION_COVERAGE}", LineCoverage: "${DELTA_LINE_COVERAGE}", MethodCoverage: "${DELTA_METHOD_COVERAGE}")
    	}
    }
    
