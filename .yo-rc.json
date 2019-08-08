@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.infy.tele",
+    "packageFolder": "com/infy/tele",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "serviceDiscoveryType": false,
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "screentwo",
+    "applicationType": "microservice",
+    "buildTool": "maven",
+    "serverPort": "8080",
+    "skipUserManagement": true,
+    "jhipsterVersion": "5.8.2",
+    "clientPackageManager": "npm",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "jwtSecretKey": "NzUzNjEwNDI1YjUzMmRkODdiYTA3ZjMxZmY2ZDM2ZDM0MWMzNTdlMDA5NzM1M2I3OTE2ZGNlMTBmNDg4NjEzODdkMGIxNTYxZDE1NzI3ODAyYjM2NjQ3NWYzOTMzMWZiZDdiNzJjZWJhYjlkZGJlYjMxYmRkZmRiMjBmZTk1MDk=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "entities": [
+    "Employee",
+    "Customer"
+  ]
+}

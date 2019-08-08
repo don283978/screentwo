@@ -1,0 +1,13 @@
+version: '2'
+services:
+    screentwo-app:
+        image: screentwo
+        environment:
+            - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://screentwo-postgresql:5432/screentwo
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+    screentwo-postgresql:
+        extends:
+            file: postgresql.yml
+            service: screentwo-postgresql
