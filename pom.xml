@@ -384,8 +384,8 @@
               </configuration>
             </execution>
             <execution>
-              <id>post-unit-test</id>
-              <phase>test</phase>
+              <id>jacoco-site</id>
+              <phase>package</phase>
               <goals>
                 <goal>report</goal>
               </goals>
