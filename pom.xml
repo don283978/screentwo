@@ -410,7 +410,7 @@
         </execution>
         <execution>
             <id>jacoco-site</id>
-            <phase>test</phase>
+            <phase>package</phase>
             <goals>
                 <goal>report</goal>
             </goals>
@@ -421,7 +421,7 @@
         </execution>
 <execution>
     <id>jacoco-check</id>
-    <phase>test</phase>
+    <phase>package</phase>
     <goals>
         <goal>check</goal>
     </goals>
