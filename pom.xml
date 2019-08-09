@@ -426,8 +426,6 @@
         <goal>check</goal>
     </goals>
     <configuration>
-        <dataFile>${project.testresult.directory}/coverage/jacoco/jacoco.exec</dataFile>
-        <outputDirectory>${project.testresult.directory}/coverage/jacoco</outputDirectory>
         <rules>
             <rule implementation="org.jacoco.maven.RuleConfiguration">
                 <element>BUNDLE</element>
