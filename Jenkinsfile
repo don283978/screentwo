@@ -90,8 +90,7 @@ node
    	stage('Code Quality Analysis')
    	{
        		FAILED_STAGE=env.STAGE_NAME
-        echo 'sonar chal gaya'
-       		//sh 'mvn sonar:sonar -Dsonar.host.url="${SONAR_HOST_URL}"' 
+            sh 'mvn sonar:sonar -Dsonar.host.url="${SONAR_HOST_URL}"' 
    	}
    }
    
